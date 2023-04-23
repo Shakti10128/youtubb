@@ -8,7 +8,7 @@ import SuggestionVideoCard from "./SuggestionVideoCard";
 const WatchPage = () => {
   const [params] = useSearchParams();
   const id = params.get("v");
-  console.log(id)
+  // console.log(id)
   const videos = UseVideos();
 
   return (
