@@ -8,12 +8,18 @@ import {RxVideo} from 'react-icons/rx'
 import {HiFire} from 'react-icons/hi'
 import {SiShopee,SiYoutubegaming} from 'react-icons/si'
 import {SlMusicTone} from 'react-icons/sl'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { hideHeader } from '../utils/HeaderSlice'
 
 const LeftSidbar = () => {
   
   const showHeader = useSelector((Store)=>Store.Header.show);
+  const dispatch = useDispatch();
+
+  const HideHeader = ()=>{
+    dispatch(hideHeader());
+  }
 
   return <>
 {showHeader && 
@@ -21,59 +27,61 @@ const LeftSidbar = () => {
        {/* Home */}
        <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
        <AiFillHome className="text-white"/>
-        <Link to='/'><p className='text-base text-white ml-5 font-semibold' onClick={()=>console.log("hi")}>Home</p></Link>
+        <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>Home</p></Link>
       </div>
 
         {/* shorts */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <BiVideoPlus className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Shorts</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>shorts</p></Link>
       </div>
       
       {/* subscriptions */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <MdSubscriptions className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Subscriptions</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>subscriptions</p></Link>
       </div>
       <hr className='h-0.5 w-40 ml-5 m-3 bg-black'/>
       {/* library */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <MdVideoLibrary className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'> Library</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>library</p></Link>
       </div>
       {/* history */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <FaHistory className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>History</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>history</p></Link>
       </div>
       {/* your videos */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <RxVideo className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Your vidoes</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>your videos</p></Link>
       </div>
       {/* watch later */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <MdOutlineWatchLater className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Watch later</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>watch later</p></Link>
       </div>
       {/* likded videos */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <BiLike className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Liked videos</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>likded videos</p></Link>
       </div>
 
       <hr className='h-0.5 w-40 ml-6 m-3 bg-black'/>
@@ -82,66 +90,46 @@ const LeftSidbar = () => {
       {/* treding */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <HiFire className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Treding</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>treding</p></Link>
       </div>
       {/* Shopping */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <SiShopee className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Shopping</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>Shopping</p></Link>
       </div>
       {/* Music */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <SlMusicTone className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Music</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'> Music
+         </p></Link>
       </div>
       {/* Live */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <MdOutlineLiveTv className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Live</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>Live</p></Link>
       </div>
 
       {/* Gaming */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <SiYoutubegaming className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>Gaming</li>
-        </ul>
+          <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>Gaming</p></Link>
       </div>
       {/* News */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
         <BiNews className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>News</li>
-        </ul>
-      </div>
-      {/* News */}
-      <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
-        <BiNews className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>News</li>
-        </ul>
-      </div>
-      {/* News */}
-      <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
-        <BiNews className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>News</li>
-        </ul>
-      </div>
-      {/* News */}
-      <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
-        <BiNews className="text-white"/>
-        <ul>
-          <li className='text-base text-white ml-5 font-semibold'>News</li>
-        </ul>
+        <Link to='/'><p
+        onClick={()=>HideHeader()}
+         className='text-base text-white ml-5 font-semibold'>News</p></Link>
       </div>
   </div>
 }

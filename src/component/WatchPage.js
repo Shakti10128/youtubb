@@ -8,7 +8,6 @@ import SuggestionVideoCard from "./SuggestionVideoCard";
 const WatchPage = () => {
   const [params] = useSearchParams();
   const id = params.get("v");
-  // console.log(id)
   const videos = UseVideos();
 
   return (
@@ -26,11 +25,14 @@ const WatchPage = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
+            <div></div>
         </div>
         <div className="similar-videos">
              {
               videos.map((item)=>{
-                return <Link key={item.id} className="simlar-vid" to={`/watch?v=`+item.id}><SuggestionVideoCard  data={item}/></Link>
+                return <Link key={item.id} className="simlar-vid" to={`/watch?v=`+item.id}>
+                  <SuggestionVideoCard  data={item}/>
+                  </Link>
               })
              }
         </div>
