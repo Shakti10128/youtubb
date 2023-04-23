@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+
+import WatchPage from './component/WatchPage';
+import Home from './component/Home';
+import Header from './component/Header';
+
+// scss files
+import './scss/Main.scss'
+import './scss/Header.scss'
+// import './scss/Buttons.scss'
+import './scss/LeftSidebar.scss'
+import './scss/VideoCard.scss'
+import './scss/VideoContainer.scss'
+import './scss/WatchPage.scss'
+import './scss/SuggestionVideoCard.scss'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app bg-black overflow-hidden">
+      <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route path='/' exact element={<Home/>} />
+        <Route path="/watch" element={<WatchPage/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

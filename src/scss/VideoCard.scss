@@ -1,0 +1,182 @@
+
+.videoCard{
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    height: 20rem;
+    margin: 1.2rem 0.2rem;
+    // background-color: red;
+
+    >.videoCardImage{
+        height: 220px;
+        width: 390px;
+        border-radius: 1rem;
+        padding: 3px;
+        // background-color: greenyellow;
+    }
+    >.thumnail{
+        display: flex;
+        margin-top: 0.5rem;
+
+        >.video-info{
+            padding: 0rem 1rem;
+            >.description{
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            >p{
+                font-size: 12px;
+                font-weight: bold;
+                color: rgb(165, 165, 165);
+            }
+        }
+    }
+    >.thumnail >.thumnail-image{
+        border-radius: 50%;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    
+}
+
+
+
+
+// media queri for 1025
+@media screen and (max-width: 1025px) {
+    .videoCard{
+        display: flex;
+        flex-direction: column;
+        width: 19rem;
+        height: 18rem;
+        margin: 0rem 0.5rem;
+
+        >.videoCardImage{
+            height: 200px;
+            width: 380px;
+            border-radius: 1rem;
+            padding: 3px;
+        }
+    }
+
+}
+// media queri for 768
+@media screen and (max-width: 768px) {
+    .videoCard{
+        display: flex;
+        flex-direction: column;
+        width: 19rem;
+        height: 18rem;
+    }
+}
+
+// media queri for 425
+@media screen and (max-width: 426px) {
+    
+    .videoCard{
+        display: flex;
+        flex-direction: column;
+        width: 24rem;
+        height: 22rem;
+        margin: 0.5rem 0.9rem;
+        
+        >.videoCardImage{
+            height: 220px;
+            width: 420px;
+            border-radius: 1rem;
+            padding: 3px;
+        }
+    }
+}
+
+
+// media queri for 376
+@media screen and (max-width: 376px) {
+
+    .videoCard{
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        width: 20rem;
+        height: 19rem;
+        margin: 0.5rem 0.9rem;
+        // background-color: red;
+    
+        >.videoCardImage{
+            height: 180px;
+            width: 420px;
+            border-radius: 1rem;
+            padding: 3px;
+        }
+        >.thumnail{
+            display: flex;
+            margin-top: 0.5rem;
+    
+            >.video-info{
+                padding: 0rem 1rem;
+                >.description{
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                }
+                >p{
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: rgb(165, 165, 165);
+                }
+            }
+        }
+        >.thumnail >.thumnail-image{
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+// media queri for 320
+@media screen and (max-width: 321px) {
+
+    .videoCard{
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        width: 18rem;
+        height: 19rem;
+        margin: 0.5rem 0.9rem;
+        // background-color: red;
+    
+        >.videoCardImage{
+            height: 180px;
+            width: 420px;
+            border-radius: 1rem;
+            padding: 3px;
+        }
+        >.thumnail{
+            display: flex;
+            margin-top: 0.5rem;
+    
+            >.video-info{
+                padding: 0rem 1rem;
+                >.description{
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                }
+                >p{
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: rgb(165, 165, 165);
+                }
+            }
+        }
+        >.thumnail >.thumnail-image{
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

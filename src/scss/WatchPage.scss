@@ -1,0 +1,196 @@
+.watch-page{
+    display: flex;
+    background-color: rgb(15, 14, 14);
+
+        >.watch-video-card{
+            height: 75vh;
+            width: 62vw;
+            margin: 2rem;
+        }
+
+    >.similar-videos{
+        flex: 1.4;
+        height: 100vh;
+        margin-left: 1rem;
+        overflow-y:scroll;
+    }
+}
+
+// media query for screen 1441 max
+
+@media screen and (max-width: 1441px) {
+    .watch-page{
+        display: flex;
+        >.watch-video-card{
+            height: 350px;
+            width: 62vw;
+            margin-top: 10rem;
+                
+                >.iframe{
+                    width: 55rem;
+                    height: 30rem;
+                }
+            }
+
+            >.similar-videos{
+                flex: 1.4;
+                height: 100vh;
+                width: 86vw;
+                // background-color: blueviolet;
+                overflow-y:scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+        }
+
+}
+// media query for screen 1025 max
+
+@media screen and (max-width: 1025px) {
+    .watch-page{
+        display: block;
+        >.watch-video-card{
+            height: 350px;
+                width: 62vw;
+                margin: 0rem 4rem;
+                
+                >.iframe{
+                    width: 55rem;
+                    height: 30rem;
+                }
+            }
+
+            >.similar-videos{
+                flex: 1.4;
+                height: 40vh;
+                width: 86vw;
+                // background-color: blueviolet;
+                margin-top: 8.5rem;
+                margin-left: 4rem;
+                overflow-y:scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+        }
+
+}
+// media query for screen 768 max
+
+@media screen and (max-width: 769px) {
+    .watch-page{
+        display: block;
+        >.watch-video-card{
+            height: 300px;
+                width: 62vw;
+                margin: 0rem 4rem;
+                
+                >.iframe{
+                    width: 40rem;
+                    height: 20rem;
+                }
+            }
+
+            >.similar-videos{
+                flex: 1.4;
+                height: 40vh;
+                width: 86vw;
+                // background-color: blueviolet;
+                margin-top: 2rem;
+                margin-left: 4rem;
+                overflow-y:scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+        }
+
+}
+
+// media query for screen 426 max
+@media screen and (max-width: 426px) {
+    .watch-page{
+        display: block;
+        >.watch-video-card{
+            height: 250px;
+                width: 62vw;
+                margin-left: -0.4rem;
+                
+                >.iframe{
+                    width: 27rem;
+                    height: 15rem;
+                }
+            }
+
+            >.similar-videos{
+                height: 100vh;
+                width: 100vw;
+                margin-left: 0.2rem;
+                margin-top: 0rem;
+                overflow-y:scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+        }
+
+}
+
+
+// media query for screen 375 max
+@media screen and (max-width: 376px) {
+    .watch-page{
+        display: block;
+        >.watch-video-card{
+            height: 250px;
+                width: 55vw;
+                margin-left: -0.4rem;
+                
+                >.iframe{
+                    width: 23.8rem;
+                    height: 15rem;
+                }
+            }
+
+            >.similar-videos{
+                height: 100vh;
+                width: 100vw;
+                margin-left: 0.2rem;
+                margin-top: 0rem;
+                overflow-y:scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+        }
+
+}
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+    .watch-page{
+        display: block;
+        >.watch-video-card{
+            height: 250px;
+                width: 55vw;
+                margin-left: -0.4rem;
+                
+                >.iframe{
+                    width: 20.4rem;
+                    height: 12rem;
+                }
+            }
+
+            >.similar-videos{
+                height: 100vh;
+                width: 100vw;
+                margin-left: 0.2rem;
+                margin-top: -2.8rem;
+                overflow-y:scroll;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+        }
+
+}

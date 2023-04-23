@@ -1,0 +1,245 @@
+
+
+.header{
+    display: flex;
+    height: 3.6rem;
+    justify-content: space-between;
+    background-color: rgb(15, 14, 14);
+    
+
+    >.menu-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >.menu{
+            font-size: 1.5rem;
+            margin:0rem 1.5rem;
+            color: white;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        >.logo{
+            width: 100px;
+            height: 20px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    
+    >.search-bar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >.search-input{
+            width: 35vw;
+            height: 2.5rem;
+            color: white;
+            background-color: rgb(21, 21, 21);
+            padding-left: 1rem;
+            border: 1px solid rgb(88, 87, 87);
+            &:focus{
+                border: 2px solid orangered ;
+                font-size: 1rem;
+            }
+        }
+        >.search-button{
+            color: white;
+            background-color: rgb(21, 21, 21);
+            width: 3.5rem;
+            height: 2.5rem;
+            border: 1px solid rgb(88, 87, 87);
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    >.user{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 12rem;
+        margin-right: 1rem;
+        >.video{
+            font-size: 1.7rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        >.bell-icon{
+            font-size: 1.7rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        >.admin{
+            font-size: 1.5rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+// media queri for 425
+@media screen and (max-width: 426px) {
+    .header{
+        display: flex;
+        height: 3.6rem;
+        justify-content: space-between;
+        background-color: rgb(15, 14, 14);
+        // background-color: gray;
+        
+    
+        >.menu-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            >.menu{
+                display: block;
+            }
+            >.logo{
+               display: none;
+            }
+        }
+        
+        >.search-bar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            >.search-input{
+                width: 50vw;
+                height: 2.2rem;
+                color: white;
+                background-color: rgb(21, 21, 21);
+                border: 1px solid rgb(88, 87, 87);
+                &:focus{
+                    border: 2px solid orangered ;
+                    font-size: 1rem;
+                }
+            }
+            >.search-button{
+                color: white;
+                background-color: rgb(21, 21, 21);
+                width: 8vw;
+                height: 2.2rem;
+                border: 1px solid rgb(88, 87, 87);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        >.user{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 12rem;
+            >.video{
+                display: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            >.bell-icon{
+                margin:0rem 0.2rem;
+                font-size: 1.7rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            >.admin{
+                margin:0rem 0.2rem;
+                font-size: 1.5rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+// media queri for 320
+@media screen and (max-width: 321px) {
+    .header{
+        display: flex;
+        height: 3.6rem;
+        justify-content: space-between;
+        background-color: rgb(15, 14, 14);
+        // background-color: gray;
+        
+    
+        >.menu-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            >.menu{
+                display: block;
+            }
+            >.logo{
+               display: none;
+            }
+        }
+        
+        >.search-bar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            >.search-input{
+                width: 50vw;
+                height: 2rem;
+                color: white;
+                background-color: rgb(21, 21, 21);
+                border: 1px solid rgb(88, 87, 87);
+                &:focus{
+                    border: 2px solid orangered ;
+                    font-size: 1rem;
+                }
+            }
+            >.search-button{
+                color: white;
+                background-color: rgb(21, 21, 21);
+                width: 8vw;
+                height: 2rem;
+                border: 1px solid rgb(88, 87, 87);
+                &:hover{
+                    border-color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        >.user{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 12rem;
+            >.video{
+                display: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            >.bell-icon{
+                display: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            >.admin{
+                margin:0rem 0.2rem;
+                font-size: 1.5rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

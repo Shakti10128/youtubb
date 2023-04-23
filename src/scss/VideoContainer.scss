@@ -1,0 +1,56 @@
+.videoConatainer{
+    min-width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 1rem;
+    // background-color: red;
+}
+
+@media screen and (max-width: 1025px) {
+    .videoConatainer{
+        min-width: 99%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        overflow-x: hidden;
+        padding: 1rem;
+        margin: auto;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+    .videoConatainer{
+        min-width: 99%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        overflow-x: hidden;
+        padding: 1rem;
+        margin: 1rem;
+    }
+  }
+
+
+@media screen and (max-width: 426px) {
+    .videoConatainer{
+        min-width: 99%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin: 0.2rem auto;
+    }
+  }

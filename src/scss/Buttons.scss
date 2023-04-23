@@ -1,0 +1,15 @@
+.buttons-list{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    overflow-y: scroll;
+}
+.buttons{
+    background-color: rgb(71, 72, 72);
+    margin: 0.5rem;
+    padding: 0rem 0.5rem;
+    min-width: max-content;
+    height: 2rem;
+    border-radius: 8px;
+}
+

@@ -1,0 +1,89 @@
+.videos-suggestion-list{
+  margin: 0.5rem 0rem;
+  display: flex flex-col;
+  // background-color: greenyellow;
+
+  >.suggestion-videoCard{
+    // background-color: blue;
+    display: flex;
+    align-items: center;
+
+    >.video-image{
+      background-size: cover;
+      width: 11rem;
+      border-radius: 0.2rem;
+    }
+    >.details{
+      margin: 0.4rem;
+      overflow: hidden;
+      
+      >h1{
+        font-size: 0.85rem;
+      }
+      >p{
+        color: rgb(165, 165, 165);
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+
+// media query for screen 425 max
+@media screen and (max-width: 426px) {
+  .videos-suggestion-list{
+    >.suggestion-videoCard{
+      >.video-image{
+        width: 9rem;
+      }
+    }
+  }
+}
+// media query for screen 375 max
+@media screen and (max-width: 376px) {
+  .videos-suggestion-list{
+    >.suggestion-videoCard{
+      // background-color: blue;
+      display: flex;
+      align-items: center;
+  
+      >.video-image{
+        width: 7rem;
+      }
+      >.details{
+
+        >h1{
+          font-size: 0.6rem;
+        }
+        >p{
+          color: rgb(165, 165, 165);
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+  .videos-suggestion-list{
+    >.suggestion-videoCard{
+      // background-color: blue;
+      display: flex;
+      align-items: center;
+  
+      >.video-image{
+        width: 7rem;
+      }
+      >.details{
+
+        >h1{
+          font-size: 0.6rem;
+        }
+        >p{
+          color: rgb(165, 165, 165);
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
