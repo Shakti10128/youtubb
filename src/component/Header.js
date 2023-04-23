@@ -84,7 +84,6 @@ const Header = () => {
         </div>
         }
       </div>
-
       <div className="user">
         <BiVideoPlus className="video text-white" />
         <BiBell className="bell-icon text-white" />
