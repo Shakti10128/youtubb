@@ -1,5 +1,7 @@
 import axios from "axios";
 
+export const YOUTUBE_SEARCH_SUGGESTIONS = 'http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=';
+
 export const KEY = "AIzaSyBVx0Jq9RRnvLUSA6XCCqcaVPrPvj44R1A";
 export const YOUTUBE_VIDEO_API = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" + KEY;
 
