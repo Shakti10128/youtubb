@@ -48,7 +48,14 @@
 @media screen and (max-width: 426px) {
   .left-sidebar {
     width: 12rem;
-
+    top: 2.8rem;
+  }
+}
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+  .left-sidebar {
+    width: 12rem;
+    top: 2.6rem;
   }
 }
 

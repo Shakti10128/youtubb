@@ -11,16 +11,22 @@ import {SlMusicTone} from 'react-icons/sl'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { hideHeader } from '../utils/HeaderSlice'
+import { hideSuggestionContainer,showSuggestionContainer } from '../utils/SearchSuggestionSlice'
 
 const LeftSidbar = () => {
   
   const showHeader = useSelector((Store)=>Store.Header.show);
   const dispatch = useDispatch();
 
-  const HideHeader = ()=>{
+  const takeIntoSearchQueryPage = ()=>{
     dispatch(hideHeader());
+    dispatch(showSuggestionContainer());
   }
-
+// hide sidebar and take into homepage
+   const takeIntoHomePage = ()=>{
+    dispatch(hideHeader());
+    dispatch(hideSuggestionContainer());
+   }
   return <>
 {showHeader && 
   <div className="left-sidebar flex flex-col w-44 top-0 left-0 fixed  overflow-hidden">
@@ -28,7 +34,7 @@ const LeftSidbar = () => {
        <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
        <AiFillHome className="text-white"/>
         <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoHomePage()}
          className='text-base text-white ml-5 font-semibold'>Home</p></Link>
       </div>
 
@@ -36,7 +42,7 @@ const LeftSidbar = () => {
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <BiVideoPlus className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>shorts</p></Link>
       </div>
       
@@ -44,7 +50,7 @@ const LeftSidbar = () => {
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <MdSubscriptions className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>subscriptions</p></Link>
       </div>
       <hr className='h-0.5 w-40 ml-5 m-3 bg-black'/>
@@ -52,35 +58,35 @@ const LeftSidbar = () => {
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <MdVideoLibrary className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>library</p></Link>
       </div>
       {/* history */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <FaHistory className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>history</p></Link>
       </div>
       {/* your videos */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <RxVideo className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>your videos</p></Link>
       </div>
       {/* watch later */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <MdOutlineWatchLater className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>watch later</p></Link>
       </div>
       {/* likded videos */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <BiLike className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>likded videos</p></Link>
       </div>
 
@@ -91,21 +97,21 @@ const LeftSidbar = () => {
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <HiFire className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>treding</p></Link>
       </div>
       {/* Shopping */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <SiShopee className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>Shopping</p></Link>
       </div>
       {/* Music */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <SlMusicTone className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'> Music
          </p></Link>
       </div>
@@ -113,7 +119,7 @@ const LeftSidbar = () => {
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <MdOutlineLiveTv className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>Live</p></Link>
       </div>
 
@@ -121,14 +127,14 @@ const LeftSidbar = () => {
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <SiYoutubegaming className="text-white"/>
           <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>Gaming</p></Link>
       </div>
       {/* News */}
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
         <BiNews className="text-white"/>
         <Link to='/'><p
-        onClick={()=>HideHeader()}
+        onClick={()=>takeIntoSearchQueryPage()}
          className='text-base text-white ml-5 font-semibold'>News</p></Link>
       </div>
   </div>

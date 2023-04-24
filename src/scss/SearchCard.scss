@@ -1,0 +1,184 @@
+.chanel-info {
+  display: flex;
+  height: 25vh;
+  margin-top: 4rem;
+  // background-color: rgb(35, 18, 50);
+  border-top: 1px solid rgb(48, 48, 48);
+  border-bottom: 1px solid rgb(48, 48, 48);
+
+  > .youtuber-profile-image {
+    border-radius: 50%;
+    align-self: center;
+    margin-left: 10rem;
+  }
+  > .channel-details {
+    display: flex;
+    align-self: center;
+    margin-left: 8rem;
+
+    > .channel {
+      width: 45vw;
+      // background-color: red;
+      > .title {
+        font-size: 1.2rem;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin: 0.2rem 0rem;
+      }
+      > .username {
+        margin: 0.3rem 0rem;
+        font-size: 0.8rem;
+        color: rgb(193, 192, 192);
+      }
+      > .description {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        color: rgb(193, 192, 192);
+      }
+    }
+    > button {
+      background-color: white;
+      color: black;
+      border-radius: 10rem;
+      font-weight: bold;
+      margin: 2rem 0rem 0rem 1rem;
+      height: 2.5rem;
+      width: 6.5rem;
+    }
+  }
+}
+
+/* -----------------------------------------playlist scss Start Here ------------------------------------*/
+
+.playlist {
+  display: flex;
+  height: 18rem;
+  // background-color: rgb(115, 115, 189);
+
+  > .playlist-with-Vid-numbers {
+    display: flex;
+    margin: 0.8rem 1.3rem;
+    >.video_numbers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        font-size: 1.5rem;
+        margin-left: -10rem;
+        height: 100%;
+        background-color: rgba(43, 42, 42, 0.582);
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    > .playlist-image {
+      > img {
+        border-radius: 1rem;
+        width: 25rem;
+        height: 15rem;
+      }
+    }
+  }
+  > .playlist-info {
+    margin: 1rem;
+    align-self: flex-start;
+    > .playlist-title {
+      > h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    > .verified {
+      display: flex;
+      > .playlist-author-name {
+        font-size: 0.9rem;
+        margin: 0.2rem;
+      }
+      > .playlist-author-verified {
+        color: rgb(53, 134, 220);
+        margin-top: 0.4rem;
+      }
+    }
+    > .view-full-playlist {
+      > .view_all {
+        text-decoration: underline;
+        text-underline-offset: 0.3rem;
+        &:hover {
+          color: rgb(145, 142, 142);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* -----------------------------------------playlist scss End Here ------------------------------------*/
+
+
+
+
+
+/* -----------------------------------------videoCard scss start Here ------------------------------------*/
+.final-video-card {
+    >.video-card{
+        display: flex;
+        margin: 0.8rem 1.3rem;
+        >.video_image{
+            >.vid_image{
+                width: 25rem;
+                height: 16rem;
+                border-radius: 1rem;
+            }
+        }
+
+        >.video-details{
+            margin-left: 2.2rem;
+            >.name_and_publish{
+                >.vidoe_name{
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: 0.2rem 0rem;
+                }
+                >.vidoe_publish{
+                    font-size: 0.8rem;
+                    color: rgb(193, 192, 192);
+                }
+            }
+            >.yt-logo{
+                display: flex;
+                margin: 0.8rem 0rem;
+                align-self: center;
+                >.avatar{
+                    align-self: center;
+                }
+                >.youtuber_name{
+                    margin-left: 0.8rem;
+                    color: rgb(193, 192, 192);
+                    font-size: 0.9rem;
+                    align-self: center;
+                }
+                >.verified{
+                    color: rgb(53, 134, 220);
+                    align-self: center;
+                    margin-left: 0.5rem;
+                }
+            }
+            >.descriptionSnippet{
+                color: rgb(193, 192, 192);
+                font-size: 0.8rem;
+            }
+            >.videoQuality{
+                background-color: rgb(64, 62, 62);
+                width: 2rem;
+                font-size: 0.8rem;
+                padding-left: 0.4rem;
+            }
+        }
+    }
+}
+
+/* -----------------------------------------videoCard scss End Here ------------------------------------*/

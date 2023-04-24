@@ -14,6 +14,8 @@ import './scss/VideoCard.scss'
 import './scss/VideoContainer.scss'
 import './scss/WatchPage.scss'
 import './scss/SuggestionVideoCard.scss'
+import './scss/SearchContainer.scss'
+import './scss/SearchCard.scss'
 
 function App() {
   return (

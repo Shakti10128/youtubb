@@ -2,7 +2,7 @@
 
 .header{
     display: flex;
-    // height: 3.6rem;
+    height: 4rem;
     justify-content: space-between;
     background-color: rgb(15, 14, 14);
     
@@ -72,9 +72,6 @@
                 background-color: rgb(225, 222, 222);
             }
         }
-        >.suggestion-name{
-            color: red;
-        }
     }
 }
 
@@ -111,10 +108,8 @@
 @media screen and (max-width: 426px) {
     .header{
         display: flex;
-        // height: 3.6rem;
         justify-content: space-between;
         background-color: rgb(15, 14, 14);
-        // background-color: gray;
         
     
         >.menu-logo{
@@ -154,6 +149,23 @@
                 border: 1px solid rgb(88, 87, 87);
                 &:hover{
                     cursor: pointer;
+                }
+            }
+        }
+
+        >.suggestions{
+            margin-left: -4.6rem;
+            width: 100vw;
+            border-radius: 0rem;
+            background-color: white;
+            >.suggestion-search{
+                font-size: 0.8rem;
+                font-size: 1rem;
+                >.recent{
+                    margin-top: 0.3rem;
+                }
+                >.suggestion-name{
+                    font-size: 0.8rem;
                 }
             }
         }
@@ -238,6 +250,13 @@
                     border-color: white;
                     cursor: pointer;
                 }
+            }
+        }
+        >.suggestions{
+            width: 100vw;
+            height: 20rem;
+            >.suggestion-search{
+                font-size: 0.6rem;
             }
         }
     }

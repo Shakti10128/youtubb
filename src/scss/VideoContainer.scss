@@ -52,5 +52,9 @@
         overflow-x: hidden;
         overflow-y: scroll;
         margin: 0.2rem auto;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
   }

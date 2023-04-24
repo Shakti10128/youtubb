@@ -9,8 +9,9 @@ const useSuggestedVideos = () => {
     
     const fetchSelectedCategoriesData =  (query) =>{
         getDataFromApi(`search/?q=${query}`).then(({contents})=>{
-            console.log(contents);
-            setSuggestedVideos(contents);
+            const data = contents.json()
+            // console.log(data)
+            setSuggestedVideos(data);
         })
     }
   return SuggestedVideos;

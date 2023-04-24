@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import HeaderSlice from "./HeaderSlice";
+import QuerySlice from "./QuerySlice";
+import SearchSuggestionSlice from "./SearchSuggestionSlice";
 
 const Store = configureStore({
     reducer:{
-        Header:HeaderSlice
+        Header:HeaderSlice,
+        querySlice:QuerySlice,
+        searchSuggestion:SearchSuggestionSlice
     }
 });
 
