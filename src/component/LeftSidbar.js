@@ -9,13 +9,21 @@ import {HiFire} from 'react-icons/hi'
 import {SiShopee,SiYoutubegaming} from 'react-icons/si'
 import {SlMusicTone} from 'react-icons/sl'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { hideHeader } from '../utils/HeaderSlice'
 import { hideSuggestionContainer,showSuggestionContainer } from '../utils/SearchSuggestionSlice'
 
 const LeftSidbar = () => {
+
+  let navigate = useNavigate(); 
+  const routeChange = (item) =>{ 
+    let path = `/results?search_query=`+item; 
+    navigate(path);
+  }
   
   const showHeader = useSelector((Store)=>Store.Header.show);
+  // console.log(showHeader);
   const dispatch = useDispatch();
 
   const takeIntoSearchQueryPage = ()=>{
@@ -23,6 +31,10 @@ const LeftSidbar = () => {
     dispatch(showSuggestionContainer());
   }
 // hide sidebar and take into homepage
+  const HideHeader = ()=>{
+    dispatch(hideHeader());
+  }
+
    const takeIntoHomePage = ()=>{
     dispatch(hideHeader());
     dispatch(hideSuggestionContainer());
@@ -42,7 +54,8 @@ const LeftSidbar = () => {
       <div className='flex w-64 ml-6 items-center h-9 pt-1 hover:cursor-pointer hover:text-gray-700'>
           <BiVideoPlus className="text-white"/>
           <Link to='/'><p
-        onClick={()=>takeIntoSearchQueryPage()}
+        onClick={()=>HideHeader()}
+        onMouseDown={()=>routeChange("shorts")}
          className='text-base text-white ml-5 font-semibold'>shorts</p></Link>
       </div>
       

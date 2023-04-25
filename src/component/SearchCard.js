@@ -11,14 +11,7 @@ const Playlist = ({ data }) => {
   const title = data?.playlist?.title;
   return (
     <div className="playlist">
-      <div className="playlist-with-Vid-numbers">
-        <Link to={`/watch?v=` + playlistId} className="playlist-image">
-          <img src={thumbnails} alt="" />
-        </Link>
-        <Link to={`/watch?v=` + playlistId} className="video_numbers">
-          <h1>{videoNumbers}</h1>
-        </Link>
-      </div>
+          <img className="img" src={thumbnails} alt=""/>
       <div className="playlist-info">
         <Link
           to={`/watch?v=` + playlistId}

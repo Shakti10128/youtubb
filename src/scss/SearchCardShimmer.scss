@@ -1,0 +1,308 @@
+.finalSearchCard{
+    display: flex;
+    flex-direction: column;
+
+    >.searchCard{
+        display: flex;
+
+        >.searchCardImage{
+            width: 25rem;
+            height: 15rem;
+            margin: 0.8rem 1.3rem;
+            border-radius: 1rem;
+            background-color: rgba(80, 79, 79, 0.646);
+        }
+        >.searchChanel{
+            width: 70rem;
+            height: 15rem;
+            margin: 0.8rem 1.3rem;
+
+            >.searchTitle{
+                height: 2rem;
+                width: 65rem;
+                margin: 0.5rem 0rem;
+                border-radius: 0.4rem;
+                color: rgba(56, 56, 56, 0.646);
+                background-color:rgba(80, 79, 79, 0.646);
+            }
+            >.searchUsername{
+                height: 2rem;
+                width: 65rem;
+                margin: 0.5rem 0rem;
+                border-radius: 0.4rem;
+                color: rgba(56, 56, 56, 0.646);
+                background-color: rgba(80, 79, 79, 0.646);
+            }
+            >.searchDescription{
+                height: 2rem;
+                width: 65rem;
+                border-radius: 0.4rem;
+                margin: 0.5rem 0rem;
+                color: rgba(56, 56, 56, 0.646);
+                background-color: rgba(80, 79, 79, 0.646);
+            }
+        }
+    }
+}
+
+// media query for screen 1024 max
+@media screen and (max-width: 1025px) {
+    .finalSearchCard{
+        >.searchCard{
+            >.searchCardImage{
+                width: 20rem;
+                height: 12rem;
+                margin: 0.2rem 1.3rem;
+            }
+            >.searchChanel{
+                width: 15rem;
+                height: 15rem;
+                margin: 0rem 1.3rem;
+    
+                >.searchTitle{
+                    height: 2rem;
+                    width: 36rem;
+                    margin: 0.5rem 0rem;
+                }
+                >.searchUsername{
+                    height: 2rem;
+                    width: 36rem;
+                    margin: 0.5rem 0rem;
+                }
+                >.searchDescription{
+                    height: 2rem;
+                    width: 36rem;
+                }
+            }
+        }
+    }
+}
+// media query for screen 768 max
+@media screen and (max-width: 769px) {
+    .finalSearchCard{
+        >.searchCard{
+            >.searchCardImage{
+                width: 20rem;
+                height: 12rem;
+                margin: 0.2rem 1.3rem;
+            }
+            >.searchChanel{
+                width: 15rem;
+                height: 15rem;
+                margin: 0rem 1.3rem;
+    
+                >.searchTitle{
+                    height: 2rem;
+                    width: 23rem;
+                    margin: 0.5rem 0rem;
+                }
+                >.searchUsername{
+                    height: 2rem;
+                    width: 23rem;
+                    margin: 0.5rem 0rem;
+                }
+                >.searchDescription{
+                    height: 2rem;
+                    width: 23rem;
+                }
+            }
+        }
+    }
+}
+// media query for screen 540 max
+@media screen and (max-width: 541px) {
+    .finalSearchCard{
+        >.searchCard{
+            height: 8rem;
+            // background-color: red;
+            margin:0.5rem 0rem;
+            >.searchCardImage{
+                width: 18rem;
+                height: 8rem;
+                // background-color: blue;
+                margin: 0.2rem 0.3rem;
+            }
+            >.searchChanel{
+                width: 22rem;
+                height: 15rem;
+                margin: 0rem 1.3rem;
+    
+                >.searchTitle{
+                    height: 1.2rem;
+                    width: 14rem;
+                    margin: 0.5rem 0rem;
+                }
+                >.searchUsername{
+                    height: 1.2rem;
+                    width: 14rem;
+                    margin: 0.5rem 0rem;
+                }
+                >.searchDescription{
+                    height: 1.2rem;
+                    width: 14rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+// media query for screen 425 max
+@media screen and (max-width: 426px) {
+    .finalSearchCard{
+        >.searchCard{
+            height: 7rem;
+            // background-color: red;
+            margin:0.5rem 0rem;
+            >.searchCardImage{
+                width: 18rem;
+                height: 6rem;
+                // background-color: blue;
+                margin: 0.2rem 0.3rem;
+            }
+            >.searchChanel{
+                width: 22rem;
+                height: 15rem;
+                margin: 0rem 1.3rem;
+    
+                >.searchTitle{
+                    height: 1.2rem;
+                    width: 14rem;
+                    margin: 0.5rem 0rem;
+                }
+                >.searchUsername{
+                    height: 1.2rem;
+                    width: 14rem;
+                    margin: 0.5rem 0rem;
+                }
+                >.searchDescription{
+                    height: 1.2rem;
+                    width: 14rem;
+                }
+            }
+        }
+    }
+}
+
+// media query for screen 412 max
+@media screen and (max-width: 413px) {
+    .finalSearchCard{
+        >.searchCard{
+            display: flex;
+            flex-direction: column;
+            height: 20rem;
+            // background-color: rgb(66, 38, 38);
+            margin:0.5rem 0rem;
+            >.searchCardImage{
+                width: 26rem;
+                height: 20rem;
+                // background-color: blue;
+                border-radius: 0rem;
+                margin: 0.2rem 0rem;
+            }
+            >.searchChanel{
+                width: 22rem;
+                height: 15rem;
+                margin: 0rem 0.2rem;
+    
+                >.searchTitle{
+                    height: 1.2rem;
+                    width: 25.2rem;
+                    border-radius: 0rem;
+                }
+                >.searchUsername{
+                    height: 1.2rem;
+                    width: 25.2rem;
+                    border-radius: 0rem;
+                }
+                >.searchDescription{
+                    height: 1.2rem;
+                    width: 25.2rem;
+                    border-radius: 0rem;
+                }
+            }
+        }
+    }
+}
+
+// media query for screen 375 max
+@media screen and (max-width: 376px) {
+    .finalSearchCard{
+        >.searchCard{
+            display: flex;
+            flex-direction: column;
+            height: 20rem;
+            // background-color: rgb(66, 38, 38);
+            margin:0.5rem 0rem;
+            >.searchCardImage{
+                width: 23.5rem;
+                height: 20rem;
+                // background-color: blue;
+                border-radius: 0rem;
+                margin: 0.2rem 0rem;
+            }
+            >.searchChanel{
+                width: 22rem;
+                height: 15rem;
+                margin: 0rem 0.2rem;
+    
+                >.searchTitle{
+                    height: 1.2rem;
+                    width: 23rem;
+                    border-radius: 0rem;
+                }
+                >.searchUsername{
+                    height: 1.2rem;
+                    width: 23rem;
+                    border-radius: 0rem;
+                }
+                >.searchDescription{
+                    height: 1.2rem;
+                    border-radius: 0rem;
+                    width: 23rem;
+                }
+            }
+        }
+    }
+}
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+    .finalSearchCard{
+        >.searchCard{
+            display: flex;
+            flex-direction: column;
+            height: 20rem;
+            // background-color: rgb(66, 38, 38);
+            margin:0.5rem 0rem;
+            >.searchCardImage{
+                width: 20rem;
+                height: 20rem;
+                // background-color: blue;
+                border-radius: 0rem;
+                margin: 0.2rem 0rem;
+            }
+            >.searchChanel{
+                width: 22rem;
+                height: 15rem;
+                margin: 0rem 0.2rem;
+    
+                >.searchTitle{
+                    height: 1.2rem;
+                    width: 19.5rem;
+                    border-radius: 0rem;
+                }
+                >.searchUsername{
+                    height: 1.2rem;
+                    width: 19.5rem;
+                    border-radius: 0rem;
+                }
+                >.searchDescription{
+                    height: 1.2rem;
+                    width: 19.5rem;
+                    border-radius: 0rem;
+                }
+            }
+        }
+    }
+}

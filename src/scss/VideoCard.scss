@@ -91,6 +91,27 @@
         }
     }
 }
+// media queri for 414
+@media screen and (max-width: 415px) {
+    
+    .videoCard{
+        display: flex;
+        flex-direction: column;
+        width: 28rem;
+        height: 22rem;
+        margin: 0.2rem 0rem 0rem 2rem;
+        
+        >.videoCardImage{
+            height: 220px;
+            width: 420px;
+            border-radius: 0rem;
+            padding: 3px;
+        }
+        >.thumnail{
+            margin-left: 1rem;
+        }
+    }
+}
 // media queri for 393
 @media screen and (max-width: 394px) {
     
@@ -103,7 +124,7 @@
         
         >.videoCardImage{
             height: 220px;
-            width: 420px;
+            width: 405px;
             border-radius: 0.5rem;
             padding: 3px;
         }

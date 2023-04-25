@@ -61,8 +61,13 @@ const Header = () => {
       return;
     }
     suggestion();
+    const val = inputValue;
+    setInputValue("")
     dispatch(setQuery(inputValue));
     dispatch(showSuggestionContainer());
+    routeChange(val)
+    
+
   };
 
   // on input Focus
@@ -84,6 +89,7 @@ const Header = () => {
       dispatch(setSuggestionFalse());
       dispatch(setQuery(inputValue));
       dispatch(showSuggestionContainer());
+      setInputValue('');
       routeChange(inputValue)
       return;
     }
@@ -100,7 +106,7 @@ const Header = () => {
   };
 
   const setSuggestionDataIntoQuery = (item) => {
-    setInputValue(item);
+    // setInputValue(item);
     dispatch(setQuery(item));
     dispatch(showSuggestionContainer());
   };

@@ -75,6 +75,59 @@
   }
 }
 
+// media query for screen 912 max
+@media screen and (max-width: 913px) {
+  .chanel-info {
+    
+    > .youtuber-profile-image {
+      border-radius: 50%;
+      height: 50%;
+      align-self: center;
+      margin-left:2rem;
+    }
+    > .channel-details {
+      margin-left: 5rem;
+      > button {
+        margin: 3rem 0rem 0rem 1rem;
+      }
+    }
+  }
+}
+// media query for screen 880 max
+@media screen and (max-width: 881px) {
+  .chanel-info {
+    
+    > .youtuber-profile-image {
+      margin-left:2rem;
+    }
+    > .channel-details {
+      margin-left: 5rem;
+      > button {
+        margin: 3rem 0rem 0rem 1rem;
+      }
+    }
+  }
+}
+
+// media query for screen 540 max
+@media screen and (max-width: 541px) {
+  .chanel-info {
+    
+    > .youtuber-profile-image {
+      border-radius: 50%;
+      height: 50%;
+      align-self: center;
+      margin-left:2rem;
+    }
+    > .channel-details {
+      margin-left: 2rem;
+      > button {
+        margin: 3rem 0rem 0rem 1rem;
+      }
+    }
+  }
+}
+
 // media query for screen 425 max
 @media screen and (max-width: 426px) {
   .chanel-info {
@@ -118,6 +171,42 @@
     }
   }
 }
+
+// media query for screen 414 max
+@media screen and (max-width: 415px) {
+  .chanel-info {
+    
+    > .youtuber-profile-image {
+      border-radius: 50%;
+      height: 50%;
+      align-self: center;
+      margin-left:0.5rem;
+    }
+    > .channel-details {
+      > button {
+        margin: 0rem 0rem 0rem -0.1rem;
+      }
+    }
+  }
+}
+// media query for screen 393 max
+@media screen and (max-width: 394px) {
+  .chanel-info {
+    
+    > .youtuber-profile-image {
+      border-radius: 50%;
+      height: 50%;
+      align-self: center;
+      margin-left:0.5rem;
+    }
+    > .channel-details {
+      > button {
+        margin: 0rem 0rem 0rem -0.1rem;
+      }
+    }
+  }
+}
+
 // media query for screen 320 max
 @media screen and (max-width: 321px) {
   .chanel-info {
@@ -128,49 +217,27 @@
     }
   }
 }
-// media query for screen 375 max
-@media screen and (max-width: 376px) {
+
+// media query for screen 280 max
+@media screen and (max-width: 281px) {
   .chanel-info {
-    display: flex;
-    height: 20vh;
-    margin-top: 4rem;
-    border-top: 1px solid rgb(48, 48, 48);
-    border-bottom: 1px solid rgb(48, 48, 48);
     
     > .youtuber-profile-image {
       border-radius: 50%;
-      height: 50%;
+      height: 30%;
       align-self: center;
-      margin-left:0.5rem;
     }
     > .channel-details {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 0.6rem;
-  
-      > .channel {
-        width: 45vw;
-        > .title {
-          font-size: 0.7rem;
-          font-weight: bold;
-        }
-        > .username {
-          font-size: 0.5rem;
-        }
-        > .description {
-          font-size: 0.4rem;
-        }
-      }
+      margin-left: 0.5rem;
       > button {
-        font-size: 0.8rem;
-        margin: 0rem 0rem 0rem -0.1rem;
-        height: 1.8rem;
-        width: 5rem;
+        height: 1.5rem;
+        width: 4.5rem;
+        margin: rem 0rem 0rem 0rem;
       }
     }
   }
 }
+
 
 /* -----------------------------------------playlist scss Start Here ------------------------------------*/
 
@@ -178,34 +245,12 @@
   display: flex;
   height: 18rem;
   // background-color: rgb(115, 115, 189);
-
-  > .playlist-with-Vid-numbers {
-    display: flex;
-    margin: 0.8rem 1.3rem;
-    >.video_numbers{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 10rem;
-        font-size: 1.5rem;
-        margin-left: -10rem;
-        height: 100%;
-        color: white;
-        background-color: rgba(43, 42, 42, 0.582);
-
-        &:hover{
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    }
-    > .playlist-image {
-      > img {
+    >.img {
         border-radius: 1rem;
         width: 25rem;
         height: 15rem;
+        margin-left: 1.5rem;
       }
-    }
-  }
   > .playlist-info {
     margin: 1rem;
     align-self: flex-start;
@@ -246,20 +291,13 @@
 // media query for screen 1024 max
 @media screen and (max-width: 1025px) {
   .playlist {
-    > .playlist-with-Vid-numbers {
-      flex: 3;
-      >.video_numbers{
-      }
-      > .playlist-image {
-        > img {
+      > .img {
           border-radius: 1rem;
-          width: 25rem;
-          height: 12rem;
+          width: 22rem;
+          height: 13rem;
         }
-      }
-    }
     > .playlist-info {
-      flex: 6;
+      margin-left: 2rem;
   }
 }
 }
@@ -268,20 +306,17 @@
 // media query for screen 768 max
 @media screen and (max-width: 769px) {
   .playlist {
-    > .playlist-with-Vid-numbers {
-      flex: 5;
-      >.video_numbers{
-      }
-      > .playlist-image {
-        > img {
+
+      > .img {
           border-radius: 1rem;
-          width: 25rem;
+          width: 21.8rem;
           height: 12rem;
-        }
       }
-    }
     > .playlist-info {
       flex: 5;
+      >.playlist-title >h1{
+        font-size: 0.8rem;
+      }
   }
 }
 }
@@ -292,26 +327,77 @@
   .playlist {
     margin: 2rem 0rem;
     width: 100vw;
+    // background-color: red;
+      > .img{
+          border-radius: 1rem;
+          width: 8.5rem;
+          height: 7rem;
+      }
+    > .playlist-info {
+      margin-left: 1rem;
+      >.playlist-title >h1{
+        font-size: 0.9rem;
+      }
+      >.verified{
+        >.playlist-author-name{
+          font-size: 0.7rem;
+        }
+      }
+      >.view-full-playlist{
+        >.view_all{
+          font-size: 0.8rem;
+        }
+      }
+  }
+}
+}
+
+// media query for screen 414 max
+@media screen and (max-width: 415px) {
+  .playlist {
     display: flex;
     flex-direction: column;
     // background-color: red;
-    > .playlist-with-Vid-numbers {
-      >.video_numbers{
-      }
-      > .playlist-image {
-        background-color: blue;
-        > img {
-          border-radius: 0rem;
-          width: 37rem;
+        >.img{
+          width: 100vw;
           height: 14rem;
-          margin-left: -1.3rem;
+          border-radius: 0rem;
+          margin: 0rem 0rem 0rem 0rem;
         }
-      }
-    }
     > .playlist-info {
       >.playlist-title >h1{
         font-size: 0.9rem;
-        margin-top: -1.5rem;
+        margin-top: 0.5rem;
+      }
+      >.verified{
+        >.playlist-author-name{
+          font-size: 0.7rem;
+        }
+      }
+      >.view-full-playlist{
+        >.view_all{
+          font-size: 0.8rem;
+        }
+      }
+  }
+}
+}
+// media query for screen 393 max
+@media screen and (max-width: 394px) {
+  .playlist {
+    display: flex;
+    flex-direction: column;
+    // background-color: red;
+        >.img{
+          width: 100vw;
+          height: 14rem;
+          border-radius: 0rem;
+          margin: 0rem 0rem 0rem 0rem;
+        }
+    > .playlist-info {
+      >.playlist-title >h1{
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
       }
       >.verified{
         >.playlist-author-name{
@@ -516,16 +602,63 @@
     }
 }
 }
-
-
-// media query for screen 425 max
-@media screen and (max-width: 426px) {
+// media query for screen 540 max
+@media screen and (max-width: 541px) {
+  .final-video-card {
+    // background-color: rgb(81, 57, 57);
+    >.video-card{
+        display: flex;
+        flex: 2;
+        // margin: 0.8rem 1.3rem;
+        >.vd-image-section{
+          flex: 3;
+          text-align: center;
+          float: left;
+          height: 8rem;
+          width: 15rem;
+          object-fit: cover;
+          // background-color: blueviolet;
+          >.video_image{
+              >.vid_image{
+                height: 7rem;
+                width: 12rem;
+              }
+          }
+        }
+        >.video-details{
+          flex: 5;
+          // background-color: goldenrod;
+            margin-left: 1rem;
+            >.name_and_publish{
+                >.vidoe_name{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    margin: 0.2rem 0rem;
+                    color: white;
+                    &:hover{
+                      cursor: pointer;
+                    }
+                }
+            }
+            >.descriptionSnippet{
+              display: none;
+            }
+            >.videoQuality{
+              display: none;
+            }
+        }
+    }
+}
+}
+// media query for screen 414 max
+@media screen and (max-width: 415px) {
   .final-video-card {
     // background-color: rgb(81, 57, 57);
     >.video-card{
         display: flex;
         flex-direction: column;
         margin-left: 0rem;
+        // width: 95.5vw;
         // background-color: rgb(48, 47, 47);
         >.vd-image-section{
           text-align: center;
@@ -536,7 +669,7 @@
           // background-color: blueviolet;
           >.video_image{
               >.vid_image{
-                height: 13rem;
+                height: 14rem;
                 width: 100vw;
                 border-radius: 0px;
               }
@@ -556,12 +689,9 @@
                     }
                 }
               }
-            >.descriptionSnippet{
-              display: none;
-            }
-            >.videoQuality{
-              display: none;
-            }
+              >.yt-logo{
+                margin-top: 0rem;
+              }
         }
     }
 }
@@ -571,16 +701,43 @@
   .final-video-card {
     // background-color: rgb(81, 57, 57);
     >.video-card{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0rem;
         // width: 95.5vw;
+        // background-color: rgb(48, 47, 47);
         >.vd-image-section{
-
+          text-align: center;
+          float: left;
           height: 13rem;
           width: 100vw;
+          object-fit: cover;
+          // background-color: blueviolet;
           >.video_image{
               >.vid_image{
+                height: 14rem;
                 width: 100vw;
+                border-radius: 0px;
               }
           }
+        }
+        >.video-details{
+          // background-color: goldenrod;
+            margin-left: 1rem;
+            >.name_and_publish{
+                >.vidoe_name{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    margin: 0.2rem 0rem;
+                    color: white;
+                    &:hover{
+                      cursor: pointer;
+                    }
+                }
+              }
+              >.yt-logo{
+                margin-top: 0rem;
+              }
         }
     }
 }

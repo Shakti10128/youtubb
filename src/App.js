@@ -9,7 +9,6 @@ import SearchContainer from './component/SearchContainer';
 // scss files
 import './scss/Main.scss'
 import './scss/Header.scss'
-// import './scss/Buttons.scss'
 import './scss/LeftSidebar.scss'
 import './scss/VideoCard.scss'
 import './scss/VideoContainer.scss'
@@ -19,6 +18,7 @@ import './scss/SearchContainer.scss'
 import './scss/SearchCard.scss'
 import './scss/VideoCardShimmer.scss'
 import './scss/SimilarVideosShimmer.scss'
+import './scss/SearchCardShimmer.scss'
 
 function App() {
   return (
