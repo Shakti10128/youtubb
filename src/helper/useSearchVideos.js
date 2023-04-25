@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { getQueryDataFromApi } from "../utils/constant";
+import { useSearchParams } from "react-router-dom";
 
 const useSearchVideos = () => {
+  const [params] = useSearchParams();
+  const query = params.get("search_query");
   const [searchData, setSearchData] = useState([]);
-  const querydata = useSelector((Store) => Store.querySlice.recentQuery);
-  const query = querydata[0];
-  console.log(query);
+  // console.log(query)
 
   useEffect(() => {
     fetchSelectedCategoriesData(query);
@@ -15,7 +15,7 @@ const useSearchVideos = () => {
   const fetchSelectedCategoriesData = (query) => {
     getQueryDataFromApi(`search/?q=${query}`).then(({ contents }) => {
       setSearchData(contents);
-      console.log(searchData);
+      // console.log(searchData);
     });
   };
   return searchData;

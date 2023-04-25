@@ -22,7 +22,15 @@ import {
   hideSuggestionContainer,
 } from "../utils/SearchSuggestionSlice";
 
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+
+  let navigate = useNavigate(); 
+  const routeChange = (item) =>{ 
+    let path = `/results?search_query=`+item; 
+    navigate(path);
+  }
   const [queryData, setQueryData] = useState("");
   const [inputValue, setInputValue] = useState("");
   const [suggestionData, setSuggestionData] = useState([]);
@@ -54,7 +62,6 @@ const Header = () => {
     }
     suggestion();
     dispatch(setQuery(inputValue));
-    setInputValue("");
     dispatch(showSuggestionContainer());
   };
 
@@ -63,6 +70,7 @@ const Header = () => {
     if (isHeaderTrue) {
       dispatch(hideHeader());
     }
+    dispatch(hideSuggestionContainer());
     dispatch(setShowRecentSearchTrue());
   };
 
@@ -76,7 +84,7 @@ const Header = () => {
       dispatch(setSuggestionFalse());
       dispatch(setQuery(inputValue));
       dispatch(showSuggestionContainer());
-      setInputValue("");
+      routeChange(inputValue)
       return;
     }
   };
@@ -94,7 +102,6 @@ const Header = () => {
   const setSuggestionDataIntoQuery = (item) => {
     setInputValue(item);
     dispatch(setQuery(item));
-    setInputValue("");
     dispatch(showSuggestionContainer());
   };
 
@@ -155,19 +162,20 @@ const Header = () => {
           <div className="suggestions">
             {recentQueries.map((item, index) => {
               return (
-                <div
-                  key={index}
-                  className="suggestion-search"
-                  onMouseDown={() => setSuggestionDataIntoQuery(item)}
-                >
-                  <FaHistory className="recent mx-1 mt-2" />{" "}
-                  <p
-                    className="suggestion-name mx-1 cursor-pointer"
-                    placeholder="nothing"
+                <Link to={`/results?search_query=` + item} key={index}>
+                  <div
+                    className="suggestion-search flex"
+                    onMouseDown={() => setSuggestionDataIntoQuery(item)}
                   >
-                    {item}
-                  </p>
-                </div>
+                    <FaHistory className="recent mx-1 mt-2" />{" "}
+                    <p
+                      className="suggestion-name mx-1 cursor-pointer"
+                      onMouseDown={()=>routeChange(item)}
+                    >
+                      {item}
+                    </p>
+                  </div>
+                </Link>
               );
             })}
           </div>
@@ -177,14 +185,14 @@ const Header = () => {
               {suggestionData.map((item, index) => {
                 return (
                   <div
-                    key={index}
+                  key={index}
                     className="suggestion-search"
                     onMouseDown={() => setSuggestionDataIntoQuery(item)}
                   >
                     🔍{" "}
                     <p
                       className="suggestion-name mx-1 cursor-pointer"
-                      placeholder="nothing"
+                      onMouseDown={()=>routeChange(item)}
                     >
                       {item}
                     </p>

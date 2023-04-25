@@ -1,23 +1,27 @@
 import React from "react";
+import { MdVerified } from "react-icons/md";
 
 const VideoCard = ({ data }) => {
-  const channelName = data?.snippet?.channelTitle;
-  const title = data?.snippet?.title;
-  const thumbnails = data?.snippet?.thumbnails;
-  // const commentCount = data?.statistics  ?.commentCount;
-  // const likeCount = data?.statistics?.likeCount;
-  const viewCount= data?.statistics?.viewCount;
+  const title = data?.video?.title;
+  // const videoId = data?.video?.videoId;
+  const youtuber_name = data?.video?.author?.title;
+  const publishDate = data?.video?.publishedTimeText;
+  const views = data?.video?.stats?.views?.toString();
+  const thumbnails = data?.video?.thumbnails[0]?.url;
+  const avatar = data?.video?.author?.avatar[0]?.url;
+  // const descriptionSnippet = data?.video?.descriptionSnippet;
+  // const videoQuality = data?.video?.badges[0];
+
   return (
     <div className="videos-list md:flex">
-
       <div className="videoCard">
-        <img className="videoCardImage" src={thumbnails?.medium?.url} alt="" />
+        <img className="videoCardImage" src={thumbnails} alt="" />
         <div className="thumnail">
-          <img className="thumnail-image" src="https://i.insider.com/5e453e1996eee6566a38be32?width=700" alt="" />
+          <img className="thumnail-image" src={avatar} alt="" />
         <div className="video-info">
           <h1 className="description">{title}</h1>
-          <p>{channelName}</p>
-          <p>{viewCount}M - 2 months age</p>
+          <p className="flex">{youtuber_name}{<MdVerified className="verified mt-1 ml-3 text-blue-500"/>}</p>
+          <p>{views?.slice(0,2)}M views - {publishDate}</p>
         </div>
         </div>
       </div>

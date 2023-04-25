@@ -2,19 +2,17 @@ import { useState,useEffect } from 'react'
 import { getDataFromApi } from "../utils/constant";
 
 const useSuggestedVideos = () => {
-    const [SuggestedVideos,setSuggestedVideos] = useState([]);
+    const [videos,setVideos] = useState([]);
     useEffect(()=>{
-        fetchSelectedCategoriesData();
-    },[]);
-    
-    const fetchSelectedCategoriesData =  (query) =>{
-        getDataFromApi(`search/?q=${query}`).then(({contents})=>{
-            const data = contents.json()
-            // console.log(data)
-            setSuggestedVideos(data);
-        })
-    }
-  return SuggestedVideos;
+        getVideos();
+      },[])
+      const getVideos = async ()=>{
+        const data = await fetch(YOUTUBE_VIDEO_API);
+        const json = await data.json();
+        setVideos(json.items);
+        // console.log(json.items)
+      }
+  return videos
 }
 
 export default useSuggestedVideos

@@ -1,9 +1,10 @@
 .watch-page{
     display: flex;
+    margin-top: -1.5rem;
     background-color: rgb(15, 14, 14);
 
         >.watch-video-card{
-            height: 75vh;
+            height: vh;
             width: 62vw;
             margin: 2rem;
         }
@@ -13,6 +14,7 @@
         height: 100vh;
         margin-left: 1rem;
         overflow-y:scroll;
+        // background-color: green;
     }
 }
 

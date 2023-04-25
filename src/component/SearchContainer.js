@@ -1,21 +1,22 @@
-import React from "react"
-import useSearchVideos from "../helper/useSearchVideos"
-import SearchCard from './SearchCard'
+import React from "react";
+import useSearchVideos from "../helper/useSearchVideos";
+import SearchCard from "./SearchCard";
+import LeftSidbar from "./LeftSidbar";
 const SearchContainer = () => {
-const searchVideos = useSearchVideos();
-// const orignalData = Object.values(searchVideos);
-console.log(searchVideos);
+
+
+  const searchVideos = useSearchVideos()
 
   return (
-    <div className="search-container">
-      {
-        searchVideos.map((item,index)=>{
-          return <SearchCard key={index} data={item}/>
-        })
-      }
+    <>
+    <LeftSidbar/>
+      <div className="search-container">
+        {searchVideos.map((item, index) => {
+          return <SearchCard key={index} data={item} />;
+        })}
+      </div>
+    </>
+  );
+};
 
-    </div>
-  )
-}
-
-export default SearchContainer
+export default SearchContainer;

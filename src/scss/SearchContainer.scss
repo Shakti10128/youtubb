@@ -5,4 +5,7 @@
     height: 100vh;
     background-color: rgb(15, 14, 14);
     // background-color: red;
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }

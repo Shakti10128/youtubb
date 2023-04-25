@@ -1,0 +1,202 @@
+.videos-list1 {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  flex-wrap: wrap;
+
+  > .videoCard1 {
+    width: 22rem;
+    height: 20rem;
+    margin: 1.2rem 0.2rem;
+
+    > .videoCard-img {
+      height: 220px;
+      width: 350px;
+      border-radius: 1rem;
+      background-color: rgba(80, 79, 79, 0.646);
+      padding: 3px;
+    }
+    >.videoCard-info{
+        display: flex;
+        height: 5.5rem;
+        align-items: flex-start;
+        width: 95%;
+        margin: 0.3rem 0rem 0rem 0.5rem;
+        >h1{
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            color: rgba(65, 65, 65, 0.646);
+            background-color: rgba(80, 79, 79, 0.646);
+        }
+        >.ul>.first_li{
+            margin: 0.5rem 1rem;
+            width: 15rem;
+            border-radius: 0.2rem;
+            color: rgba(65, 65, 65, 0.646);
+            background-color: rgba(80, 79, 79, 0.646);
+        }
+        >.ul>.second_li{
+            margin: 0.5rem 1rem;
+            width: 13rem;
+            border-radius: 0.2rem;
+            color: rgba(64, 64, 64, 0.646);
+            background-color: rgba(80, 79, 79, 0.646);
+        }
+    }
+  }
+}
+
+
+
+
+// media query for screen 1024 max
+@media screen and (max-width: 1025px) {
+  .videos-list1 {
+    > .videoCard1 {
+      width: 18rem;
+      height: 16rem;
+      margin: 0rem 0.2rem;
+  
+      > .videoCard-img {
+        height: 170px;
+        width: 280px;
+        border-radius: 1rem;
+        background-color: rgba(80, 79, 79, 0.646);
+      }
+      >.videoCard-info{
+          height: 3.7rem;
+          width: 90%;
+          margin: 0.3rem 0rem 0rem 0.5rem;
+          >h1{
+              height: 2rem;
+              width: 10vw;
+              border-radius: 50%;
+          }
+          >.ul>.first_li{
+              margin: 0.2rem 1rem;
+              width: 12rem;
+          }
+          >.ul>.second_li{
+              margin: 0.2rem 1rem;
+              width: 9rem;
+          }
+      }
+    }
+  }
+}
+
+
+// media query for screen 425 max
+@media screen and (max-width: 426px) {
+  .videos-list1 {
+    > .videoCard1 {
+      width: 28rem;
+      height: 20rem;
+  
+      > .videoCard-img {
+        height: 230px;
+        width: 400px;
+        border-radius: 1rem;
+      }
+      >.videoCard-info{
+          height: 3.7rem;
+          width: 90%;
+          >h1{
+              height: 2.5rem;
+              width: 12vw;
+          }
+          >.ul>.first_li{
+              width: 18rem;
+          }
+          >.ul>.second_li{
+              width: 13rem;
+          }
+      }
+    }
+  }
+}
+// media query for screen 393 max
+@media screen and (max-width: 394px) {
+  .videos-list1 {
+    > .videoCard1 {
+      width: 26rem;
+      height: 20rem;
+  
+      > .videoCard-img {
+        height: 230px;
+        width: 380px;
+        border-radius: 1rem;
+      }
+      >.videoCard-info{
+          height: 3.7rem;
+          width: 80%;
+          >h1{
+              height: 2rem;
+              width: 12vw;
+          }
+          >.ul>.first_li{
+              width: 18rem;
+          }
+          >.ul>.second_li{
+              width: 13rem;
+          }
+      }
+    }
+  }
+}
+
+
+
+
+// media query for screen 375 max
+@media screen and (max-width: 376px) {
+  .videos-list1 {
+    > .videoCard1 {
+      width: 22rem;
+      height: 18rem;
+      margin: 0rem 0.2rem;
+  
+      > .videoCard-img {
+        height: 200px;
+        width: 350px;
+      }
+      >.videoCard-info{
+          >h1{
+              height: 2rem;
+              width: 12vw;
+          }
+      }
+    }
+  }
+}
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+  .videos-list1 {
+    > .videoCard1 {
+      width: 20rem;
+      height: 18rem;
+      margin: 0rem 0.2rem;
+  
+      > .videoCard-img {
+        height: 180px;
+        width: 320px;
+        border-radius: 0px;
+      }
+      >.videoCard-info{
+          >h1{
+              height: 2rem;
+              width: 12vw;
+          }
+          >.ul>.first_li{
+            width: 15rem;
+        }
+        >.ul>.second_li{
+            width: 12rem;
+        }
+      }
+    }
+  }
+}

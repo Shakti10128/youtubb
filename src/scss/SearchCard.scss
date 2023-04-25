@@ -20,6 +20,7 @@
       width: 45vw;
       // background-color: red;
       > .title {
+        color: white;
         font-size: 1.2rem;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -49,6 +50,128 @@
   }
 }
 
+
+// media query for screen 768 max
+@media screen and (max-width: 769px) {
+  .chanel-info {
+    
+    > .youtuber-profile-image {
+      margin-left: 1.5rem;
+    }
+    > .channel-details {
+      display: flex;
+      align-self: center;
+      margin-left: 8rem;
+      > button {
+        background-color: white;
+        color: black;
+        border-radius: 10rem;
+        font-weight: bold;
+        margin: 2rem 0rem 0rem 1rem;
+        height: 2rem;
+        width: 6rem;
+      }
+    }
+  }
+}
+
+// media query for screen 425 max
+@media screen and (max-width: 426px) {
+  .chanel-info {
+    display: flex;
+    height: 20vh;
+    margin-top: 4rem;
+    border-top: 1px solid rgb(48, 48, 48);
+    border-bottom: 1px solid rgb(48, 48, 48);
+    
+    > .youtuber-profile-image {
+      border-radius: 50%;
+      height: 50%;
+      align-self: center;
+      margin-left: 1.5rem;
+    }
+    > .channel-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2rem;
+  
+      > .channel {
+        width: 45vw;
+        > .title {
+          font-size: 0.7rem;
+          font-weight: bold;
+        }
+        > .username {
+          font-size: 0.5rem;
+        }
+        > .description {
+          font-size: 0.4rem;
+        }
+      }
+      > button {
+        font-size: 0.8rem;
+        margin: 0rem 0rem 0rem 1rem;
+        height: 2rem;
+        width: 5rem;
+      }
+    }
+  }
+}
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+  .chanel-info {
+    > .youtuber-profile-image {
+    }
+    > .channel-details {
+      margin-left: 1rem;
+    }
+  }
+}
+// media query for screen 375 max
+@media screen and (max-width: 376px) {
+  .chanel-info {
+    display: flex;
+    height: 20vh;
+    margin-top: 4rem;
+    border-top: 1px solid rgb(48, 48, 48);
+    border-bottom: 1px solid rgb(48, 48, 48);
+    
+    > .youtuber-profile-image {
+      border-radius: 50%;
+      height: 50%;
+      align-self: center;
+      margin-left:0.5rem;
+    }
+    > .channel-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0.6rem;
+  
+      > .channel {
+        width: 45vw;
+        > .title {
+          font-size: 0.7rem;
+          font-weight: bold;
+        }
+        > .username {
+          font-size: 0.5rem;
+        }
+        > .description {
+          font-size: 0.4rem;
+        }
+      }
+      > button {
+        font-size: 0.8rem;
+        margin: 0rem 0rem 0rem -0.1rem;
+        height: 1.8rem;
+        width: 5rem;
+      }
+    }
+  }
+}
+
 /* -----------------------------------------playlist scss Start Here ------------------------------------*/
 
 .playlist {
@@ -67,6 +190,7 @@
         font-size: 1.5rem;
         margin-left: -10rem;
         height: 100%;
+        color: white;
         background-color: rgba(43, 42, 42, 0.582);
 
         &:hover{
@@ -86,16 +210,18 @@
     margin: 1rem;
     align-self: flex-start;
     > .playlist-title {
+      color: white;
       > h1 {
         font-size: 1.5rem;
         font-weight: bold;
       }
     }
-
+    
     > .verified {
       display: flex;
       > .playlist-author-name {
         font-size: 0.9rem;
+        color: rgb(156, 154, 154);
         margin: 0.2rem;
       }
       > .playlist-author-verified {
@@ -105,6 +231,7 @@
     }
     > .view-full-playlist {
       > .view_all {
+        color: white;
         text-decoration: underline;
         text-underline-offset: 0.3rem;
         &:hover {
@@ -115,6 +242,116 @@
     }
   }
 }
+
+// media query for screen 1024 max
+@media screen and (max-width: 1025px) {
+  .playlist {
+    > .playlist-with-Vid-numbers {
+      flex: 3;
+      >.video_numbers{
+      }
+      > .playlist-image {
+        > img {
+          border-radius: 1rem;
+          width: 25rem;
+          height: 12rem;
+        }
+      }
+    }
+    > .playlist-info {
+      flex: 6;
+  }
+}
+}
+
+
+// media query for screen 768 max
+@media screen and (max-width: 769px) {
+  .playlist {
+    > .playlist-with-Vid-numbers {
+      flex: 5;
+      >.video_numbers{
+      }
+      > .playlist-image {
+        > img {
+          border-radius: 1rem;
+          width: 25rem;
+          height: 12rem;
+        }
+      }
+    }
+    > .playlist-info {
+      flex: 5;
+  }
+}
+}
+
+
+// media query for screen 425 max
+@media screen and (max-width: 426px) {
+  .playlist {
+    margin: 2rem 0rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    // background-color: red;
+    > .playlist-with-Vid-numbers {
+      >.video_numbers{
+      }
+      > .playlist-image {
+        background-color: blue;
+        > img {
+          border-radius: 0rem;
+          width: 37rem;
+          height: 14rem;
+          margin-left: -1.3rem;
+        }
+      }
+    }
+    > .playlist-info {
+      >.playlist-title >h1{
+        font-size: 0.9rem;
+        margin-top: -1.5rem;
+      }
+      >.verified{
+        >.playlist-author-name{
+          font-size: 0.7rem;
+        }
+      }
+      >.view-full-playlist{
+        >.view_all{
+          font-size: 0.8rem;
+        }
+      }
+  }
+}
+}
+
+
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+  .playlist {
+    > .playlist-with-Vid-numbers {
+      >.video_numbers{
+      }
+      > .playlist-image {
+        background-color: blue;
+        > img {
+          border-radius: 0rem;
+          width: 37rem;
+          height: 11rem;
+          margin-left: -1.3rem;
+        }
+      }
+    }
+}
+}
+
+
+
+
+
+
 
 /* -----------------------------------------playlist scss End Here ------------------------------------*/
 
@@ -127,13 +364,21 @@
     >.video-card{
         display: flex;
         margin: 0.8rem 1.3rem;
-        >.video_image{
-            >.vid_image{
-                width: 25rem;
-                height: 16rem;
-                border-radius: 1rem;
-            }
+        // background-color: rgb(178, 178, 178);
+        >.vd-image-section{
+          width: 25rem;
+          height: 15rem;
+          // background-color: blue;
+          >.video_image{
+            box-sizing: border-box;
+              >.vid_image{
+                  width: 100%;
+                  height: 15rem;
+                  border-radius: 1rem;
+              }
+          }
         }
+        
 
         >.video-details{
             margin-left: 2.2rem;
@@ -142,6 +387,10 @@
                     font-size: 1.2rem;
                     font-weight: bold;
                     margin: 0.2rem 0rem;
+                    color: white;
+                    &:hover{
+                      cursor: pointer;
+                    }
                 }
                 >.vidoe_publish{
                     font-size: 0.8rem;
@@ -172,13 +421,216 @@
                 font-size: 0.8rem;
             }
             >.videoQuality{
+              color: white;
                 background-color: rgb(64, 62, 62);
                 width: 2rem;
                 font-size: 0.8rem;
-                padding-left: 0.4rem;
+                padding-left: 0.3rem;
             }
         }
     }
+}
+
+// media query for screen 1024 max
+@media screen and (max-width: 1025px) {
+  .final-video-card {
+    // background-color: rgb(81, 57, 57);
+    >.video-card{
+        display: flex;
+        flex: 2;
+        // margin: 0.8rem 1.3rem;
+        >.vd-image-section{
+          flex: 5;
+          text-align: center;
+          float: left;
+          height: 13rem;
+          width: 15rem;
+          object-fit: cover;
+          // background-color: blueviolet;
+          >.video_image{
+              >.vid_image{
+                height: 13rem;
+                width: 22rem;
+              }
+          }
+        }
+        >.video-details{
+          flex: 8;
+          // background-color: goldenrod;
+            margin-left: 1rem;
+            >.name_and_publish{
+                >.vidoe_name{
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: 0.2rem 0rem;
+                    color: white;
+                    &:hover{
+                      cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+// media query for screen 768 max
+@media screen and (max-width: 769px) {
+  .final-video-card {
+    // background-color: rgb(81, 57, 57);
+    >.video-card{
+        display: flex;
+        flex: 2;
+        // margin: 0.8rem 1.3rem;
+        >.vd-image-section{
+          flex: 5;
+          text-align: center;
+          float: left;
+          height: 13rem;
+          width: 15rem;
+          object-fit: cover;
+          // background-color: blueviolet;
+          >.video_image{
+              >.vid_image{
+                height: 13rem;
+                width: 22rem;
+              }
+          }
+        }
+        >.video-details{
+          flex: 5;
+          // background-color: goldenrod;
+            margin-left: 1rem;
+            >.name_and_publish{
+                >.vidoe_name{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    margin: 0.2rem 0rem;
+                    color: white;
+                    &:hover{
+                      cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+
+// media query for screen 425 max
+@media screen and (max-width: 426px) {
+  .final-video-card {
+    // background-color: rgb(81, 57, 57);
+    >.video-card{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0rem;
+        // background-color: rgb(48, 47, 47);
+        >.vd-image-section{
+          text-align: center;
+          float: left;
+          height: 13rem;
+          width: 100vw;
+          object-fit: cover;
+          // background-color: blueviolet;
+          >.video_image{
+              >.vid_image{
+                height: 13rem;
+                width: 100vw;
+                border-radius: 0px;
+              }
+          }
+        }
+        >.video-details{
+          // background-color: goldenrod;
+            margin-left: 1rem;
+            >.name_and_publish{
+                >.vidoe_name{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    margin: 0.2rem 0rem;
+                    color: white;
+                    &:hover{
+                      cursor: pointer;
+                    }
+                }
+              }
+            >.descriptionSnippet{
+              display: none;
+            }
+            >.videoQuality{
+              display: none;
+            }
+        }
+    }
+}
+}
+// media query for screen 375 max
+@media screen and (max-width: 376px) {
+  .final-video-card {
+    // background-color: rgb(81, 57, 57);
+    >.video-card{
+        // width: 95.5vw;
+        >.vd-image-section{
+
+          height: 13rem;
+          width: 100vw;
+          >.video_image{
+              >.vid_image{
+                width: 100vw;
+              }
+          }
+        }
+    }
+}
+}
+
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+  .final-video-card {
+    // background-color: rgb(81, 57, 57);
+    >.video-card{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0rem;
+        // width: 95.5vw;
+        // background-color: rgb(48, 47, 47);
+        >.vd-image-section{
+          text-align: center;
+          float: left;
+          height: 13rem;
+          width: 100vw;
+          object-fit: cover;
+          // background-color: blueviolet;
+          >.video_image{
+              >.vid_image{
+                height: 10rem;
+                width: 100vw;
+                border-radius: 0px;
+              }
+          }
+        }
+        >.video-details{
+          // background-color: goldenrod;
+            margin-left: 1rem;
+            >.name_and_publish{
+                >.vidoe_name{
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    margin: 0.2rem 0rem;
+                    color: white;
+                    &:hover{
+                      cursor: pointer;
+                    }
+                }
+              }
+              >.yt-logo{
+                margin-top: 0rem;
+              }
+        }
+    }
+}
 }
 
 /* -----------------------------------------videoCard scss End Here ------------------------------------*/

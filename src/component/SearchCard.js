@@ -1,14 +1,13 @@
 import React from "react";
 import { MdVerified } from "react-icons/md";
 import { Link } from "react-router-dom";
+// import { useDispatch, useSelector } from "react-redux";
 
 const Playlist = ({ data }) => {
   const thumbnails = data?.playlist?.thumbnails[3].url;
   const playlistId = data?.playlist?.playlistId;
   const videoNumbers = data?.playlist?.stats?.videos;
-  console.log(videoNumbers);
   const authorName = data?.playlist?.author?.title;
-  // const verified = data?.playlist?.author?.badges[0]?.text;
   const title = data?.playlist?.title;
   return (
     <div className="playlist">
@@ -40,7 +39,7 @@ const Playlist = ({ data }) => {
 };
 
 const Channel = ({ data }) => {
-  const avatar = data?.channel?.avatar[1]?.url;
+  const avatar = data?.channel?.avatar[0]?.url;
   const title = data?.channel?.title;
   const userName = data?.channel?.username;
   const description = data?.channel?.descriptionSnippet;
@@ -69,12 +68,11 @@ const SearchCard = ({ data }) => {
   const youtuber_name = data?.video?.author?.title;
   const publishDate = data?.video?.publishedTimeText;
   const views = data?.video?.stats?.views?.toString();
-  const thumbnails = data?.video?.thumbnails[0]?.url;
+  const thumbnails = data?.video?.thumbnails[1]?.url;
   const avatar = data?.video?.author?.avatar[0]?.url;
   const descriptionSnippet = data?.video?.descriptionSnippet;
   const videoQuality = data?.video?.badges[0];
-
-  // return (
+  
   if (data?.channel) {
     return <Channel data={data} />;
   } else if (data?.playlist) {
@@ -84,14 +82,16 @@ const SearchCard = ({ data }) => {
   return (
     <div className="final-video-card">
       <div className="video-card">
+        <div className="vd-image-section">
         <Link to={`/watch?v=` + videoId} className="video_image">
           <img className="vid_image" src={thumbnails} alt="" />
         </Link>
+        </div>
         <div className="video-details">
           <div className="name_and_publish">
             <h1 className="vidoe_name">{title}</h1>
             <h1 className="vidoe_publish">
-              {views?.slice(0, 2) + "K" + " - " + publishDate}
+              {views?.slice(0, 1)+"M views - " + publishDate}
             </h1>
           </div>
           <div className="yt-logo">

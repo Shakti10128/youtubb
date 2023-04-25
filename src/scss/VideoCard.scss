@@ -65,6 +65,7 @@
 // media queri for 768
 @media screen and (max-width: 768px) {
     .videoCard{
+        margin: 1rem 0rem;
         display: flex;
         flex-direction: column;
         width: 19rem;
@@ -78,15 +79,45 @@
     .videoCard{
         display: flex;
         flex-direction: column;
-        width: 24rem;
+        width: 28rem;
         height: 22rem;
-        margin: 0.5rem 0.9rem;
+        margin: 0.2rem 0rem 0rem 2rem;
         
         >.videoCardImage{
             height: 220px;
             width: 420px;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             padding: 3px;
+        }
+    }
+}
+// media queri for 393
+@media screen and (max-width: 394px) {
+    
+    .videoCard{
+        display: flex;
+        flex-direction: column;
+        width: 28rem;
+        height: 22rem;
+        margin: 0.2rem 0rem 0rem 2rem;
+        
+        >.videoCardImage{
+            height: 220px;
+            width: 420px;
+            border-radius: 0.5rem;
+            padding: 3px;
+        }
+        >.thumnail{
+            >.thumnail-image{
+                margin-left: 1rem;
+            }
+        }
+        >.video-info{
+            >.description{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden;
+            }
         }
     }
 }
@@ -99,7 +130,7 @@
         display: flex;
         overflow: hidden;
         flex-direction: column;
-        width: 20rem;
+        width: 23.5rem;
         height: 19rem;
         margin: 0.5rem 0.9rem;
         // background-color: red;
@@ -107,7 +138,7 @@
         >.videoCardImage{
             height: 180px;
             width: 420px;
-            border-radius: 1rem;
+            border-radius: 0rem;
             padding: 3px;
         }
         >.thumnail{
@@ -143,7 +174,7 @@
         display: flex;
         overflow: hidden;
         flex-direction: column;
-        width: 18rem;
+        width: 20.2rem;
         height: 19rem;
         margin: 0.5rem 0.9rem;
         // background-color: red;
@@ -151,7 +182,7 @@
         >.videoCardImage{
             height: 180px;
             width: 420px;
-            border-radius: 1rem;
+            border-radius: 0rem;
             padding: 3px;
         }
         >.thumnail{

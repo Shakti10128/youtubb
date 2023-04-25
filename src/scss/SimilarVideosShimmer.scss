@@ -1,0 +1,139 @@
+.simialVideoShimmer{
+    >.video-info{
+        padding: 0.3rem 0rem;
+        display: flex;
+        >.video-image{
+            height: 6.6rem;
+            width: 12rem;
+            border-radius: 0.5rem;
+            color: rgba(51, 50, 50, 0.646);
+            background-color: rgb(59, 59, 59);
+            margin: 0.1rem 0rem;
+        }
+        >.suggestion-ul{
+            height: 6.6rem;
+            width: 16rem;
+
+            >.suggestion-l1{
+                width: 100%;
+                margin: 0.4rem 0.4rem;
+                border-radius: 0.4rem;
+                color: rgba(62, 61, 61, 0.646);
+                background-color: rgba(80, 79, 79, 0.646);
+            }
+            >.suggestion-l2{
+                width: 100%;
+                margin: 0.4rem 0.4rem;
+                border-radius: 0.4rem;
+                color: rgba(54, 54, 54, 0.646);
+                background-color: rgba(80, 79, 79, 0.646);
+            }
+            >.suggestion-l3{
+                width: 100%;
+                color: rgba(55, 55, 55, 0.646);
+                margin: 0.4rem 0.4rem;
+                border-radius: 0.4rem;
+                background-color:rgba(80, 79, 79, 0.646);
+            }
+        }
+    }
+}
+
+// media query for screen 1025 max
+
+@media screen and (max-width: 1025px) {
+
+    .simialVideoShimmer{
+
+        >.video-info{
+            >.suggestion-ul{
+                >.suggestion-l1{
+                    width: 65vw;
+                }
+                >.suggestion-l2{
+                    width: 50vw;
+                }
+                >.suggestion-l3{
+                    width: 65vw;
+                }
+            }
+        }
+    }
+}
+
+// media query for screen 768 max
+@media screen and (max-width: 769px) {
+    .simialVideoShimmer{
+        >.video-info{
+            >.suggestion-ul{
+                height: 6.6rem;
+                width: 16rem;
+    
+                >.suggestion-l1{
+                    width: 55vw;
+                }
+                >.suggestion-l2{
+                    width: 55vw;
+                }
+                >.suggestion-l3{
+                    width: 55vw;
+                }
+            }
+        }
+    }
+}
+// media query for screen 375 max
+@media screen and (max-width: 376px) {
+    .simialVideoShimmer{
+        >.video-info{
+            padding: 0rem 0rem;
+            >.video-image{
+                height: 6rem;
+            }
+            >.suggestion-ul{
+                height: 6.6rem;
+                width: 16rem;
+    
+                >.suggestion-l1{
+                    width: 55vw;
+                    height: 1.3rem;
+                }
+                >.suggestion-l2{
+                    width: 55vw;
+                    height: 1.3rem;
+                }
+                >.suggestion-l3{
+                    width: 55vw;
+                    height: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+
+// media query for screen 320 max
+@media screen and (max-width: 321px) {
+    .simialVideoShimmer{
+        >.video-info{
+            margin-bottom: -0.9rem;
+            >.video-image{
+                height: 5rem;
+            }
+            >.suggestion-ul{
+                height: 6.6rem;
+                width: 16rem;
+    
+                >.suggestion-l1{
+                    width: 55vw;
+                }
+                >.suggestion-l2{
+                    width: 55vw;
+                }
+                >.suggestion-l3{
+                    width: 55vw;
+                }
+            }
+        }
+    }
+}

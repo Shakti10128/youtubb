@@ -1,18 +1,18 @@
-import { useEffect,useState } from 'react'
-import { YOUTUBE_VIDEO_API } from '../utils/constant'
+import { useEffect, useState } from "react";
+import { getHomeData } from "../utils/constant";
 
 const UseVideos = () => {
-    const [videos,setVideos] = useState([]);
-    useEffect(()=>{
-        getVideos();
-      },[])
-      const getVideos = async ()=>{
-        const data = await fetch(YOUTUBE_VIDEO_API);
-        const json = await data.json();
-        setVideos(json.items);
-        console.log(json.items)
-      }
-  return videos
-}
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    fetchSelectedCategoriesData("query");
+  }, []);
+  const fetchSelectedCategoriesData = () => {
+    getHomeData(`search/?q=${"new songs"}`).then(({ contents }) => {
+      setVideos(contents);
+      // console.log(contents);
+    });
+  };
+  return videos;
+};
 
-export default UseVideos
+export default UseVideos;
